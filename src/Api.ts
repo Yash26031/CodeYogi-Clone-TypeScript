@@ -10,16 +10,16 @@ const RandomUser_Base_Url = "https://randomuser.me/api/";
 
 type UserResponse = { results: User[] };
 export const getStudents = async () => {
-  try {
-    const response = await axios.get<UserResponse>(
-      RandomUser_Base_Url + "?results=9"
-    );
-    const student = response.data.results;
-    // cacheData(student, "student");
-    return student;
-  } catch (e) {
-    handleError;
-  }
+  // try {
+  const response = await axios.get<UserResponse>(
+    RandomUser_Base_Url + "?results=9"
+  );
+  const student = response.data.results;
+  // cacheData(student, "student");
+  return student;
+  // } catch (e) {
+  //   handleError;
+  // }
 };
 
 //without async await

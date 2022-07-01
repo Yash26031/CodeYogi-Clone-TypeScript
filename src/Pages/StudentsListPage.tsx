@@ -8,8 +8,8 @@ import StudentsRow from "../RowComponents/StudentsRow";
 function StudentsListPage() {
   const [students, setStudents] = useState<User[]>([]);
   useEffect(() => {
-    const token = getStudents();
-    token.then((d) => {
+    const data = getStudents();
+    data.then((d) => {
       setStudents(d);
     });
   }, []);
